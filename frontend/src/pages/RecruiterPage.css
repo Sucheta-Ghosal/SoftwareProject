@@ -1,0 +1,361 @@
+.dashboard-wrapper {
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    color: white;
+}
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 20px 20px;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 850;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-links button.active {
+    color: var(--primary);
+}
+
+.logout-btn {
+    color: var(--error) !important;
+}
+
+.dashboard-main {
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.opp-card {
+    padding: 2rem;
+    text-align: left;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.type-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+}
+
+.card-top h3 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin: 0.5rem 0 0;
+}
+
+.company {
+    opacity: 0.6;
+    margin-bottom: 2rem;
+}
+
+.card-mid p {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.deadline-text {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 1rem !important;
+}
+
+.applicants-btn {
+    width: 100%;
+    margin-top: 2rem;
+    background: var(--primary);
+    font-weight: 700;
+    height: 50px;
+}
+
+.post-form-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: left;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+    margin-bottom: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+input, select, textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.disabled-input {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    cursor: not-allowed;
+}
+
+input:focus, select:focus, textarea:focus {
+    height: 120px;
+    resize: vertical;
+}
+
+.shortlist-btn, .select-btn, .reject-btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.shortlist-btn { background: rgba(79, 70, 229, 0.2); color: #818cf8; border: 1px solid rgba(79, 70, 229, 0.3); }
+.select-btn { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0 0.5rem; }
+.reject-btn { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+.final-status {
+    color: #34d399;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.shortlist-btn:hover { background: rgba(79, 70, 229, 0.4); }
+.select-btn:hover { background: rgba(16, 185, 129, 0.4); }
+.reject-btn:hover { background: rgba(239, 68, 68, 0.4); }
+
+.submit-post-btn {
+    background: var(--primary);
+    font-weight: 800;
+    height: 60px;
+    font-size: 1.1rem;
+}
+
+.applicants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.applicants-table th {
+    text-align: left;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    opacity: 0.5;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.applicants-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    color: #ffffff;
+}
+
+.student-profile-link {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.action-cells {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.shortlist-btn {
+    background: #10b981;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+}
+
+.reject-btn {
+    background: #ef4444;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 3rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.modal-header-student {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.student-photo-lg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    overflow: hidden;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-photo-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cgpa-highlight {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-section h4 {
+    opacity: 0.5;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.skill-chip {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.resume-btn-lg {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.resume-btn-lg:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.close-modal-btn {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.status-pill { 
+    padding: 0.5rem 1rem; 
+    border-radius: 25px; 
+    font-size: 0.8rem; 
+    font-weight: 900; 
+    color: #ffffff !important; 
+    text-transform: uppercase; 
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.status-pill.pending { background: #b45309; }
+.status-pill.shortlisted { background: #059669; }
+.status-pill.rejected { background: #dc2626; }
+
+.back-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+}

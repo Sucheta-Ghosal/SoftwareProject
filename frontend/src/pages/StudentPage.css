@@ -1,0 +1,470 @@
+.card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.applied-tag {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.applied-btn-lg {
+    flex: 2;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+.dashboard-wrapper {
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    color: white;
+}
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 20px 20px;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+
+.nav-links button.active {
+    color: var(--primary);
+}
+
+.logout-btn {
+    color: var(--error) !important;
+    font-weight: 600;
+}
+
+.dashboard-main {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.status-banner {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-banner.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.status-banner.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* Profile View */
+.profile-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.photo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 2px solid var(--primary);
+    padding: 5px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.adm-no {
+    opacity: 0.5;
+    margin: 0.5rem 0;
+}
+
+.badge {
+    background: var(--primary);
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.profile-details {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 0.3rem;
+}
+
+.highlight {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.profile-bio, .skills-section {
+    text-align: left;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.profile-bio label, .skills-section label {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.skills-tags {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.edit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+/* Browse & Applications */
+.browse-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.browse-tabs button {
+    flex: 1;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.browse-tabs button.active {
+    background: var(--primary);
+}
+
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.opp-card {
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.opp-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.card-top h3 {
+    margin: 0;
+    color: var(--primary);
+}
+
+.company {
+    opacity: 0.7;
+    margin: 0.5rem 0 1.5rem;
+    font-weight: 500;
+}
+
+.card-mid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.loc-badge, .pay-badge, .deadline-badge, .cgpa-badge {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    display: block;
+    margin-top: 5px;
+}
+
+.deadline-badge {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.cgpa-badge {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.view-details-btn {
+    width: 100%;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: none;
+}
+
+.view-details-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.app-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.status-pill {
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.status-pill.pending {
+    background: rgba(234, 179, 8, 0.1);
+    color: #eab308;
+    border: 1px solid #eab308;
+}
+
+.status-pill.shortlisted {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid #10b981;
+}
+
+.status-pill.rejected {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.date {
+    font-size: 0.7rem;
+    opacity: 0.4;
+    margin-top: 5px;
+}
+
+/* Modals */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.company-lg {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+}
+
+.modal-body {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-section h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.info-section p {
+    line-height: 1.6;
+}
+
+.info-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.info-pill {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.modal-footer {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.apply-btn-lg {
+    flex: 2;
+    background: var(--primary);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.close-btn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Edit Form */
+.edit-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.empty-msg {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.empty-state .main-btn {
+    width: auto;
+    padding: 0.8rem 2rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.save-btn {
+    flex: 2;
+    background: var(--primary);
+}
+
+.cancel-btn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+}

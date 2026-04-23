@@ -1,0 +1,75 @@
+.auth-container {
+    width: 400px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.role-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.role-selector button {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0.6rem;
+}
+
+.role-selector button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.main-btn {
+    margin-top: 1rem;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.toggle-text {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.toggle-text span {
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 0.3rem;
+}
+
+.toggle-text span:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: var(--error);
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.success-msg {
+    color: var(--success);
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
