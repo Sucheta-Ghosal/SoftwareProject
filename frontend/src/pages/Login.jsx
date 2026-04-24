@@ -12,6 +12,7 @@ const Login = () => {
         password: "",
         email: "",
         phoneNumber: "",
+        admissionNumber: "",
         companyName: ""
     });
     const [error, setError] = useState("");
@@ -88,6 +89,9 @@ const Login = () => {
                         </div>
                         <input name="name" placeholder="Full Name" onChange={handleChange} required />
                         <input name="email" type="email" placeholder="Email Address" onChange={handleChange} required />
+                        {role === "student" && (
+                            <input name="admissionNumber" placeholder="Admission Number" onChange={handleChange} required />
+                        )}
                         <input name="phoneNumber" placeholder="Phone Number (Optional)" onChange={handleChange} />
                         {role === "recruiter" && (
                             <input name="companyName" placeholder="Official Company Name" onChange={handleChange} required />

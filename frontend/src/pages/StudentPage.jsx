@@ -69,6 +69,20 @@ const StudentPage = () => {
     const handleProfileUpdate = async (e) => {
         e.preventDefault();
         try {
+            // 1. Upload resume if selected
+            if (resumeFile) {
+                const resumeFormData = new FormData();
+                resumeFormData.append("resume", resumeFile);
+                await axios.post(`http://localhost:5000/api/student/upload-resume/${studentId}`, resumeFormData);
+            }
+
+            // 2. Upload photo if selected
+            if (photoFile) {
+                const photoFormData = new FormData();
+                photoFormData.append("photo", photoFile);
+                await axios.post(`http://localhost:5000/api/student/upload-photo/${studentId}`, photoFormData);
+            }
+
             const payload = {
                 ...formData,
                 skills: formData.skills.split(",").map(s => s.trim()).filter(s => s),
@@ -83,6 +97,8 @@ const StudentPage = () => {
             await axios.put(`http://localhost:5000/api/student/profile/${studentId}`, payload);
             setMsg({ type: "success", text: "Profile updated successfully!" });
             setEditMode(false);
+            setResumeFile(null);
+            setPhotoFile(null);
             fetchData();
         } catch (err) { setMsg({ type: "error", text: err.response?.data?.error || "Update failed" }); }
     };
@@ -141,6 +157,21 @@ const StudentPage = () => {
                                         {profile?.skills?.map((s, i) => <span key={i} className="skill-tag">{s}</span>)}
                                     </div>
                                 </div>
+                                {profile?.resumeUrl && (
+                                    <div className="resume-view-section">
+                                        <label>Resume</label>
+                                        <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" className="resume-link">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
+                                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                                <polyline points="14 2 14 8 20 8" />
+                                                <line x1="16" y1="13" x2="8" y2="13" />
+                                                <line x1="16" y1="17" x2="8" y2="17" />
+                                                <polyline points="10 9 9 9 8 9" />
+                                            </svg>
+                                            View Uploaded Resume
+                                        </a>
+                                    </div>
+                                )}
                                 <button className="edit-btn" onClick={() => setEditMode(true)}>Edit Profile</button>
                             </div>
                         ) : (
@@ -181,6 +212,22 @@ const StudentPage = () => {
                                     <div className="form-group">
                                         <label>Skills</label>
                                         <input placeholder="e.g. React, Python, UI Design (comma separated)" value={formData.skills} onChange={e => setFormData({ ...formData, skills: e.target.value })} />
+                                    </div>
+                                    <div className="form-row">
+                                        <div className="form-group">
+                                            <label>Profile Photo</label>
+                                            <div className="file-input-wrapper">
+                                                <input type="file" accept="image/*" onChange={e => setPhotoFile(e.target.files[0])} />
+                                                <span className="file-hint">{photoFile ? photoFile.name : "Choose new photo..."}</span>
+                                            </div>
+                                        </div>
+                                        <div className="form-group">
+                                            <label>Resume (PDF/DOC)</label>
+                                            <div className="file-input-wrapper">
+                                                <input type="file" accept=".pdf,.doc,.docx" onChange={e => setResumeFile(e.target.files[0])} />
+                                                <span className="file-hint">{resumeFile ? resumeFile.name : "Choose resume file..."}</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="form-actions">
                                         <button type="submit" className="save-btn">Save Changes</button>

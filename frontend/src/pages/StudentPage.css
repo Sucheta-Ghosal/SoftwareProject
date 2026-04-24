@@ -468,3 +468,55 @@
     flex: 1;
     background: rgba(255, 255, 255, 0.1);
 }
+
+/* Resume & File Inputs */
+.resume-view-section {
+    text-align: left;
+    margin-bottom: 2.5rem;
+    background: rgba(16, 185, 129, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #10b981;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.resume-link:hover {
+    transform: translateX(5px);
+}
+
+.file-input-wrapper {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.file-input-wrapper:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-hint {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    word-break: break-all;
+}
